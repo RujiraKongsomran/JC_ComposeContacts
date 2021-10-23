@@ -26,7 +26,7 @@ fun CustomItem(contact: Contact) {
         modifier = Modifier
             .height(56.dp)
             .fillMaxWidth()
-            .padding(start = 16.dp, end = 16.dp),
+            .padding(start = 8.dp, end = 16.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Image(

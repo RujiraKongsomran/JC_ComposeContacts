@@ -37,7 +37,7 @@ fun DisplayData() {
     val contactRepository = ContactRepository()
     val getAllData = contactRepository.getAllData()
 
-    LazyColumn() {
+    LazyColumn {
         itemsIndexed(items = getAllData) { index, contact ->
             Log.d("Contact index", index.toString())
             CustomItem(contact = contact)
