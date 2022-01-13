@@ -11,6 +11,8 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.rujirakongsomran.jc_composecontacts.navigation.SetupNavGraph
 import com.rujirakongsomran.jc_composecontacts.repository.ContactRepository
 import com.rujirakongsomran.jc_composecontacts.ui.theme.JC_ComposeContactsTheme
 
@@ -28,7 +30,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyApp() {
     Surface(color = MaterialTheme.colors.background) {
-        DisplayData()
+        val navController = rememberNavController()
+        SetupNavGraph(navController = navController)
+        //DisplayData()
     }
 }
 
