@@ -1,13 +1,11 @@
 package com.rujirakongsomran.jc_composecontacts.navigation
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.rujirakongsomran.jc_composecontacts.AnimatedSplashScreen
+import com.rujirakongsomran.jc_composecontacts.DisplayData
 
 @Composable
 fun SetupNavGraph(navController: NavHostController) {
@@ -16,11 +14,10 @@ fun SetupNavGraph(navController: NavHostController) {
         startDestination = Screen.Splash.route
     ) {
         composable(route = Screen.Splash.route) {
-            AnimatedSplashScreen()
+            AnimatedSplashScreen(navController)
         }
         composable(route = Screen.Home.route) {
-            Box(modifier = Modifier.fillMaxSize())
+            DisplayData()
         }
     }
-
 }
